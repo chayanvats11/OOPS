@@ -63,7 +63,9 @@ int main()
 	// Product camera;
 	Product camera(10, "GoPro", 29000, 23000);
 	Product webcam(camera);
+
 	Product handycam = camera;
+	handycam.setMrp(35000);
 
 	camera.showDetails();
 	webcam.showDetails();
