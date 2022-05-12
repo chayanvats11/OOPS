@@ -48,15 +48,26 @@ public:
 	{
 		return selling_price;
 	}
+
+	void showDetails()
+	{
+		cout << "Name : " << name << endl;
+		cout << "Id : " << id << endl;
+		cout << "Selling Price : " << selling_price << endl;
+		cout << "MRP : " << mrp << endl;
+	}
 };
 
 int main()
 {
 	// Product camera;
 	Product camera(10, "GoPro", 29000, 23000);
+	Product webcam(camera);
+	Product handycam = camera;
 
-	cout << "MRP = " << camera.getMrp() << endl;
-	cout << "Selling Price = " << camera.getSellingPrice() << endl;
+	camera.showDetails();
+	webcam.showDetails();
+	handycam.showDetails();
 
 	return 0;
 }
